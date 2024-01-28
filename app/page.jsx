@@ -11,6 +11,7 @@ const Home = () => {
         <p className='desc text-center'>
             Promptly is an open source project that aims to provide a platform for users to discover and share prompts.
         </p>
+
     <Feed />
     </section>
   )
