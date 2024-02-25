@@ -10,13 +10,13 @@ const handler = NextAuth({
             clientSecret: process.env.GOOGLE_CLIENT_SECRET,
         })
     ],
-    callback:{
+    callbacks:{
         async session({session}){
             const sessionUser = await User.findOne({
-                email : session.use.email
+                email : session.user.email
             })
     
-            session.use.id = sessionUser._id.toString();
+            session.user.id = sessionUser._id.toString();
             return session;
     
         },

@@ -2,10 +2,10 @@ import mongoose from 'mongoose';
 let isConnected = false;
 
 export const connectToDB = async () => {
-    mongoose.set('strichQuery',true);
+    mongoose.set('strictQuery',true);
 
     if(isConnected){
-        console.log('mongodb is already conntected');
+        console.log('mongodb is already connected');
         return;
     }
     try {
